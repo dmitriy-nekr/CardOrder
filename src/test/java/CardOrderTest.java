@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CardOrderTest {
     private WebDriver driver;
@@ -11,6 +12,7 @@ public class CardOrderTest {
     @BeforeAll
     static void setupAll() {
         System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
     }
     @BeforeEach
     void setup() {
